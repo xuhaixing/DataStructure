@@ -54,6 +54,7 @@ public class TestApp {
         for(int i = 0;i<array.length;i++){
             temArray[array[i]-min]++;
         }
+        //下面根据计数，放到一个新数组中
 
         //累加,确定元素排序后的位置，如果一个位置存在多个元素，每取出一个元素后进行-1
         for(int i = 1;i<temArray.length;i++){
@@ -63,6 +64,7 @@ public class TestApp {
         // array[i]-min 获取元素在计数数组中的索引
         //temArray[array[i]-min]-1  为当前元素排序后的位置（因为索引从0开始所以需要减1），
         //temArray[array[i]-min] 的值减1，因为当前位置可能有重复元素，所以索引减了一个1，下次在遇到相同值的元素放到减1后的索引位置
+        //属于稳定排序
         int[] resultArray = new int[array.length];
         for(int i = array.length-1;i>=0;i--){
             resultArray[--temArray[array[i]-min]] = array[i];
