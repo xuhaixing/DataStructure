@@ -32,5 +32,3 @@ package-lock.json
 /build
 /captures
 .externalNativeBuild
-
-mypending
