@@ -15,7 +15,6 @@ package com.xhx.leetcode;
 // A linked list can be reversed either iteratively or recursively. Could you im
 //plement both?
 // Related Topics Linked List
-// 👍 5504 👎 105
 
 public class LC206 {
 
@@ -34,8 +33,8 @@ public class LC206 {
         while (head3 != null){
             head1 = head2;
             head2 = head3;
-            head2.next = head1;
             head3 = head3.next;
+            head2.next = head1;
         }
         head3.next = head2;
         return head3;
