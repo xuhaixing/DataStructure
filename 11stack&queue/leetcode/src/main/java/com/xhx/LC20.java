@@ -11,7 +11,7 @@ import java.util.Map;
  * Open brackets must be closed by the same type of brackets.
  * Open brackets must be closed in the correct order.
  *
- * 栈
+ * 栈 匹配元素
  */
 public class LC20 {
     public boolean isValid(String s) {
