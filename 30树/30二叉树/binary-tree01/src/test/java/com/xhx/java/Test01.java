@@ -10,10 +10,10 @@ import java.util.LinkedList;
  * 前序遍历
  * 中序遍历
  * 后序遍历
- *
- *                1
- *         2              3
- *    4        5               6
+ * <p>
+ * 1
+ * 2              3
+ * 4        5               6
  */
 public class Test01 {
 
@@ -21,7 +21,7 @@ public class Test01 {
     @Test
     public void test01() {
         LinkedList<Integer> list = new LinkedList<Integer>(Arrays
-                .asList(1, 2, 4, null, null, 5, null,null, 3, null, 6));
+                .asList(1, 2, 4, null, null, 5, null, null, 3, null, 6));
         TreeNode treeNode = BinaryTree.createBinaryTree(list);
         //1 2 4 5 3 6
         preOrderTraveral(treeNode);
@@ -34,9 +34,10 @@ public class Test01 {
         //4 5 2 6 3 1
         postOrderTraveral(treeNode);
     }
+
     //根节点、左子树、右子树
-    public static  void preOrderTraveral(TreeNode node){
-        if(node == null){
+    public static void preOrderTraveral(TreeNode node) {
+        if (node == null) {
             return;
         }
         System.out.print(node.getData() + " ");
@@ -45,8 +46,8 @@ public class Test01 {
     }
 
     //左子树、根节点、右子树
-    public static  void inOrderTraveral(TreeNode node){
-        if(node == null){
+    public static void inOrderTraveral(TreeNode node) {
+        if (node == null) {
             return;
         }
         inOrderTraveral(node.getLeftChild());
@@ -55,8 +56,8 @@ public class Test01 {
     }
 
     //左子树、右子树、根节点
-    public static  void postOrderTraveral(TreeNode node){
-        if(node == null){
+    public static void postOrderTraveral(TreeNode node) {
+        if (node == null) {
             return;
         }
         postOrderTraveral(node.getLeftChild());
