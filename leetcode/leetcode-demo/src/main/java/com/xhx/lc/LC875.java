@@ -35,7 +35,7 @@ public class LC875 {
                 int mid = left + (right - left) / 2;
                 int target = 0;
                 for (int pile : piles) {
-                    // 当前香蕉吃多少小时
+                    // 当当前香蕉吃多少小时前香蕉吃多少小时
                     target += (pile - 1) / mid + 1;
                 }
                 if (target == h) {
