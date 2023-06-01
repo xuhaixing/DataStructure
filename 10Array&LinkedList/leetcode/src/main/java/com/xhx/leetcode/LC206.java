@@ -30,7 +30,7 @@ public class LC206 {
         if (head3 == null) {
             return head2;
         }
-        while (head3 != null){
+        while (head3 != null) {
             head1 = head2;
             head2 = head3;
             head3 = head3.next;
@@ -40,6 +40,38 @@ public class LC206 {
         return head3;
 
     }
+
+    public ListNode reverseList2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode cur = head.next, pre = head;
+        head.next = null;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    /**
+     * 最简洁
+     */
+    public ListNode reverseList3(ListNode head) {
+        ListNode current = head;
+        ListNode previous = null;
+        while (current != null) {
+            ListNode temp = current.next;
+            current.next = previous;
+            previous = current;
+            current = temp;
+        }
+        return previous;
+    }
+
+
     class ListNode {
         int val;
         ListNode next;
